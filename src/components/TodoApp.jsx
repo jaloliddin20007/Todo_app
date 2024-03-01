@@ -68,7 +68,7 @@ const TodoApp = () => {
         </div>
         <ul ref={animationParent}>
         {todos.map((todo) => (
-            <div className="flex mb-2">
+            <div key={todo.id} className="flex mb-2">
             <li className="mb-2 p-2 mr-3 border-b-2 w-full" key={todo.id}>{todo.text}</li>
             {editMode === todo.id ? (
                 <>
